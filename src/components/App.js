@@ -16,26 +16,29 @@ function App() {
   const [error, setError] = useState("");
 
   return (
-    <div className="container">
-      <h1 className="title">Team Builder</h1>
-      {error && <h2 className="error-msg">{error}</h2>}
-      <Form
-        setError={setError}
-        setAppearance={setAppearance}
-        initialTeam={initialTeam}
-        team={team}
-        setTeam={setTeam}
-        currentTeam={currentTeam}
-        setCurrentTeam={setCurrentTeam}
-      />
-      {appearance && (
-        <div className="member-container">
-          <h1 className="team-title">Team Members:</h1>
-          {team.map((member, index) => {
-            return <Member key={index} member={member} />;
-          })}
-        </div>
-      )}
+    <div className="outer-container">
+      <div className="container">
+        <h1 className="title">Team Builder</h1>
+        {error && <h2 className="error-msg">{error}</h2>}
+        <Form
+          setError={setError}
+          setAppearance={setAppearance}
+          initialTeam={initialTeam}
+          team={team}
+          setTeam={setTeam}
+          currentTeam={currentTeam}
+          setCurrentTeam={setCurrentTeam}
+        />
+        {appearance && (
+          <div className="member-container">
+            <h1 className="team-title">Team Members:</h1>
+            {team.map((member, index) => {
+              return <Member key={index} member={member} />;
+            })}
+          </div>
+        )}
+      </div>
+      <footer className="footer">&copy; Designed by Joseph Fantuzzi 2022</footer>
     </div>
   );
 }
