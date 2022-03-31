@@ -16,7 +16,7 @@ function Form(props) {
     event.preventDefault();
 
     if (!currentTeam.name || !currentTeam.email || !currentTeam.role) {
-      setError("🚨Invalid Input. Fill Out All Fields.🚨");
+      setError("🚨 Invalid Input. Fill Out All Fields. 🚨");
       return;
     }
 
@@ -34,7 +34,9 @@ function Form(props) {
       <input type="email" id="email" name="email" value={currentTeam.email} onChange={onChange} />
       <label htmlFor="role">Role:</label>
       <select value={currentTeam.role} id="role" name="role" onChange={onChange}>
-        <option value="">--- Select a Role ---------</option>
+        <option value="" className="selection">
+          Select a Role
+        </option>
         <option value="Frontend Engineer">Frontend Engineer</option>
         <option value="Backend Engineer">Backend Engineer</option>
         <option value="UI Designer">UI Designer</option>
