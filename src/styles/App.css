@@ -1,0 +1,24 @@
+.container {
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  margin-bottom: 30px;
+  font-size: 4rem;
+}
+
+.error-msg {
+  padding-bottom: 20px;
+  color: red;
+}
+
+@media (max-width: 475px) {
+  .title {
+    font-size: 3rem;
+  }
+}
